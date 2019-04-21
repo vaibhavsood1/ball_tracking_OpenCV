@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+     <style type="text/css">
+     	.info{
+
+     		    float: left;
+    			margin-left: 4%;
+     	}
+     	.container{
+		    width: 50%;
+    		    float: right;
+    		display: inline;
+    		margin-left: 0%;
+    		margin-right: 9%;
+	}
+
+     </style>
+
+	
+	<title>Topsis</title>
+</head>
+<body>
+	<h1>Graph below</h1>
+
+	<form action='home' method='POST' enctype="multipart/form-data">
+					
+					<input id="Hash" name="hashtag" type="text" placeholder="your hashtag here"  required><br>
+					
+					
+					<button type="SUBMIT">Register</button><br>
+					
+      				</form>
+      				<div>
+      						<div class = "info">
+      							<h3>KNN</h3>
+      				
+      				<p>Positive={{count1KNN}}</p>
+      				<p>Neutral = {{count_neuKNN}}</p>
+      				<p>Negative = {{count_1KNN}}</p>
+      				<br>
+      				<h3>SVC</h3>
+      				<br>
+      				<p>Positive={{count1SVC}}</p>
+      				<p>Neutral = {{count_neuSVC}}</p>
+      				<p>Negative = {{count_1SVC}}</p>
+      				<h3>Decision Tree</h3>
+      				<br>
+      				<p>Positive={{count1DTC}}</p>
+      				<p>Neutral = {{count_neuDTC}}</p>
+      				<p>Negative = {{count_1DTC}}</p>
+      				<h3>Naive Bayes</h3>
+      				<br>
+      				<p>Positive={{count1NB}}</p>
+      				<p>Neutral = {{count_neuNB}}</p>
+      				<p>Negative = {{count_1NB}}</p>
+
+      						</div>
+
+      						<div class="container" align="left">
+			<h2>Ensemble plot</h2>
+			{{graph_data|safe}}
+	  </div>
+
+      				</div>
+      				
+
+
+
+	
+		</body>
+		</html>

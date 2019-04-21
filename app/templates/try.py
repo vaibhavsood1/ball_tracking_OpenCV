@@ -1,0 +1,2 @@
+from textblob import TextBlob
+def sentiment_textblob(feedback): senti = TextBlob(feedback) polarity = senti.sentiment.polarity if -1 <= polarity < -0.5: label = 'very bad' elif -0.5 <= polarity < -0.1: label = 'bad' elif -0.1 <= polarity < 0.2: label = 'ok' elif 0.2 <= polarity < 0.6: label = 'good' elif 0.6 <= polarity <= 1: label = 'positive' return (polarity, label) sentiment = sentiment_textblob('awesome')
